@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1000.0" style="-fx-background-color: #FAF8F6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppControllers.SearchParaController">
+   <children>
+      <TextArea fx:id="para_target" layoutX="18.0" layoutY="40.0" prefHeight="600.0" prefWidth="400.0" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font></TextArea>
+      <TextArea fx:id="para_explain" layoutX="514.0" layoutY="40.0" prefHeight="600.0" prefWidth="400.0" wrapText="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="80.0">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font></TextArea>
+      <Label layoutX="392.0" layoutY="14.0" text="Translate paragraph" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Lucida Sans Unicode" size="16.0" />
+         </font></Label>
+      <Button fx:id="btn_translate" layoutX="445.0" layoutY="317.0" mnemonicParsing="false" onAction="#HandleBtnTranslate" prefHeight="40.0" prefWidth="45.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../data/icons/icons8-arrow-50.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="Btn_copy" layoutX="931.0" layoutY="322.0" mnemonicParsing="false" onAction="#HandleBtnCopy" text="Copy" AnchorPane.rightAnchor="6.0" />
+      <ChoiceBox fx:id="choice_lang1" layoutX="135.0" layoutY="40.0" prefWidth="100.0" AnchorPane.topAnchor="40.0" />
+      <ChoiceBox fx:id="choice_lang2" layoutX="643.0" layoutY="40.0" prefHeight="30.0" prefWidth="100.0" AnchorPane.topAnchor="40.0" />
+      <Label layoutX="434.0" layoutY="284.0" text="Translate">
+         <font>
+            <Font name="Lucida Sans Unicode" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

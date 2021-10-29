@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #FAF8F6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppControllers.SearchController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="252.0" style="-fx-background-color: #FAF8F6;" styleClass="card" stylesheets="@container.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <TextField fx:id="input_search" layoutX="10.0" layoutY="9.0" onAction="#searchBtnHandler" prefHeight="42.0" prefWidth="189.0" promptText="Search word..." styleClass="input_search" stylesheets="@container.css" AnchorPane.leftAnchor="10.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btn_audio" layoutX="204.0" layoutY="11.0" mnemonicParsing="false" onAction="#HandleBtnVoice" prefHeight="42.0" prefWidth="34.0" styleClass="btn_micro" stylesheets="@container.css" AnchorPane.leftAnchor="204.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../data/icons/icons8_Microphone_48px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ListView fx:id="search_list_view" layoutX="10.0" layoutY="65.0" prefHeight="635.0" prefWidth="236.0" style="-fx-border-color: #ccc;" styleClass="list_view_search" stylesheets="@container.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="right_content" layoutX="269.0" layoutY="48.0" prefHeight="662.0" prefWidth="743.0" style="-fx-background-color: #FAF8F6;" styleClass="card" stylesheets="@container.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <AnchorPane layoutX="453.0" layoutY="17.0" maxHeight="-Infinity" prefHeight="300.0" prefWidth="280.0" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 6; -fx-border-radius: 6;" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.0">
+               <children>
+                  <Text fx:id="word_synonyms" layoutX="32.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.00002810359" AnchorPane.topAnchor="48.0" />
+                  <Label layoutX="17.0" layoutY="9.0" prefHeight="29.0" prefWidth="89.0" style="-fx-border-color: #000; -fx-border-radius: 6;" text=" Synonyms">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="453.0" layoutY="335.0" maxHeight="-Infinity" prefHeight="300.0" prefWidth="280.0" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 6;" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <Text fx:id="word_antonyms" layoutX="32.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.00001883506775" AnchorPane.topAnchor="48.0" />
+                  <Label layoutX="25.0" layoutY="15.0" prefHeight="31.0" prefWidth="89.0" style="-fx-border-color: #000; -fx-border-radius: 6;" text=" Antonyms">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="17.0" maxHeight="-Infinity" prefHeight="635.0" prefWidth="428.0" style="-fx-background-color: #fff; -fx-border-color: #CFCFC4; -fx-border-radius: 6;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="12.0" prefHeight="31.0" prefWidth="69.0" style="-fx-border-color: #ccc; -fx-border-radius: 6;" text=" Explain" textAlignment="CENTER">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="word_explain" layoutX="10.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="402.82617449760437" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="Lucida Sans Unicode" size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="295.0" layoutY="2.0" text="Search online with Synonyms and Antonyms" AnchorPane.topAnchor="2.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

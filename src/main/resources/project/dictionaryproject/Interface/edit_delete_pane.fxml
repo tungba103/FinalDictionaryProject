@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppControllers.EditController">
+   <children>
+      <Label layoutX="130.0" layoutY="4.0" text="Từ cần xóa" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Label>
+      <TextField fx:id="textField_deleted_word_target" layoutX="57.0" layoutY="33.0" onAction="#handleSearch" prefHeight="31.0" prefWidth="271.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <Button fx:id="btn_finish" layoutX="762.0" layoutY="539.0" mnemonicParsing="false" onAction="#BtnOnDeleted" prefHeight="53.0" prefWidth="104.0" text="Xác nhận" AnchorPane.rightAnchor="134.0" AnchorPane.topAnchor="539.0">
+         <font>
+            <Font name="Lucida Sans Unicode" size="18.0" />
+         </font></Button>
+      <ListView fx:id="list_view" layoutX="57.0" layoutY="98.0" onMouseClicked="#handleListView" prefHeight="494.0" prefWidth="687.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="283.0" AnchorPane.topAnchor="98.0" />
+   </children>
+</AnchorPane>
